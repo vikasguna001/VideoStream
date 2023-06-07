@@ -11,13 +11,19 @@ var http = require('http');
 
 const mongoose = require('mongoose');
 
-
-//local
-mongoose.connect('mongodb://localhost:27017/LiveStream',{}).then((res)=>{
+//live db
+mongoose.connect('mongodb+srv://vikas:vikas@cluster0.kjanl.mongodb.net/LiveStream',{}).then((res)=>{
   console.log("Db Connected");
 }).catch((error)=>{
   console.log(error + "error in db connection");
 });
+
+//local
+// mongoose.connect('mongodb://localhost:27017/LiveStream',{}).then((res)=>{
+//   console.log("Db Connected");
+// }).catch((error)=>{
+//   console.log(error + "error in db connection");
+// });
 
 
 /**
